@@ -155,8 +155,8 @@ the final print centered on paper and exactly 14.5 cm x 14.5 cm.
    center mark. The drawing should be inside, so it will not be visible in the
    final card.
 6. Carefully cut out the circle, using the knife.
-7. Cut the background print into a 14.5 mm x 14.5 mm square. You can use
-   scissors here; this cut is not super critical.
+7. Cut the background print into a 145 mm x 145 mm square. You can use scissors
+   here; this cut is not super critical.
 8. Place the background print on newspaper, face down, and spray it with
    the spray adhesive. Do this outdoors; the spray adhesive smells bad.
    Use gloves.
