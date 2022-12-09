@@ -50,11 +50,11 @@ on film, and finally assembled onto a cardboard backing.
 5. **Super glue.** I used Loctite 5g Precision. Some of the cheap stuff
    I tested didn't actually glue anything, so go with Loctite if you
    want to be sure that the glue works.
-6. **Hole punch.** This should match the size of the brass fasteners.
-   Mine were 3 mm, so I used a 3 mm punch. Note that it needs to reach
-   the center of the film and the paper, so it needs to be one of the
-   type shown in the photograph. The ones that only reach a few cm from
-   the edge of the paper cannot be used.
+6. **Hole punch.** This should match the size of the brass fasteners. Mine were
+   3 mm, so I used a 3 mm punch. Note that it needs to reach the center of the
+   film and the paper, so it needs to be one of the types that look a bit like
+   hollow cylinders. The ones that only reach a few cm from the edge of the
+   paper cannot be used.
 7. **Precision cutting knife**. X-acto or similar.
 8. **Compass**. The tool for drawing circles, not the device for finding
    the magnetic north.
@@ -151,9 +151,9 @@ the final print centered on paper and exactly 14.5 cm x 14.5 cm.
    sections again.
 4. Mark the center of the right section. This is done by drawing two
    lines corner to corner.
-5. Use a compass to draw a 130 mm circle centered on the center mark.
-   The drawing should be inside, so it will not be visible in the final
-   card.
+5. Use a compass to draw a 130 mm diameter (65 mm radius) circle centered on the
+   center mark. The drawing should be inside, so it will not be visible in the
+   final card.
 6. Carefully cut out the circle, using the knife.
 7. Cut the background print into a 14.5 mm x 14.5 mm square. You can use
    scissors here; this cut is not super critical.
@@ -162,10 +162,9 @@ the final print centered on paper and exactly 14.5 cm x 14.5 cm.
    Use gloves.
 9. Attach the background print to the middle of the center section.
    There should be 2.5 mm tolerance on each side.
-10. Cut the foreground print into a 14 cm circle. Use the symbols on the
-    film to figure which side of the film is which; we want the printed
-    side of the film facing directly against the printed side of the
-    paper.
+10. Cut the foreground film print into a 14 cm circle. Use the symbols on the
+    film to figure which side of the film is which; we want the printed side of
+    the film facing directly against the printed side of the paper.
 11. Punch the centers of both the background (with cardboard backing)
     and the foreground. Try to hit the center as close as possible; if
     it's misaligned, the animation will wobble.
@@ -174,4 +173,5 @@ the final print centered on paper and exactly 14.5 cm x 14.5 cm.
     middle section, then fold the right section on top.
 14. Cut a 13 cm x 13 cm square from white paper.
 15. Spray the paper square with spray adhesive as before.
-16. Adhere the white square to the left section.
+16. Adhere the white square to the left section. This is for writing the text in
+    the card.
