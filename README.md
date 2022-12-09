@@ -4,25 +4,24 @@ Instructions on how to make animated holiday cards from OpenGL shaders.
 
 ## Background
 
-For the past two years, I've participated in the Demoscene Holiday Card
-Exchange ([2020](https://www.pouet.net/topic.php?which=11998),
-[2021](https://www.pouet.net/topic.php?which=12205)). For both years, I
-made animated cards, in the spirit of over head projector effects. If
-you don't know what that means, see for example:
-[Shapes by Cortex](https://www.pouet.net/prod.php?which=53773).
+For the past years, I've participated in the Demoscene Holiday Card Exchange
+([2020](https://www.pouet.net/topic.php?which=11998),
+[2021](https://www.pouet.net/topic.php?which=12205),
+[2022](https://www.pouet.net/topic.php?which=12374)). I made animated cards, in
+the spirit of over head projector effects. If you don't know what that means,
+see for example: [Shapes by Cortex](https://www.pouet.net/prod.php?which=53773).
 
-The basic mechanism for the both years was the same. The card consists
-of a background, printed on a white paper, and a foreground, printed on
-a transparent film and cut to the shape of a circle. The foreground is
-mostly black, with some transparent areas. A hole is punched in the
-middle of both the background and the foreground, and they are attached
-using a brass fastener. This allows the foreground to be rotated 360
-degrees. As the foreground is rotated, it reveals different parts of the
-background, creating an animation. In particular, this can be used make
-type of
-[barrier-grid animations](https://en.wikipedia.org/wiki/Barrier-grid_animation_and_stereography),
-with a spiral shaped barrier. These are also sometimes known as
-scanimations or Moiré animations.
+The basic mechanism in all years was the same. The card consists of a
+background, printed on a white paper, and a foreground, printed on a transparent
+film and cut to the shape of a circle. The foreground is mostly black, with some
+transparent areas. A hole is punched in the middle of both the background and
+the foreground, and they are attached using a brass fastener. This allows the
+foreground to be rotated 360 degrees. As the foreground is rotated, it reveals
+different parts of the background, creating an animation. In particular, this
+can be used make type of [barrier-grid
+animations](https://en.wikipedia.org/wiki/Barrier-grid_animation_and_stereography),
+with a spiral shaped barrier. These are also sometimes known as scanimations or
+Moiré animations.
 
 The designs were prototyped with [Shadertoy](https://shadertoy.com/),
 exported as JPG with Python, printed using a laser printer on paper and
@@ -107,7 +106,11 @@ with darkness in the middle (tunnels, starfields) seem to work the best.
 
 An example of a tunnel effect (the 2021 holiday card) is
 [here](tunnel.frag); a ShaderToy online version is
-[here](https://www.shadertoy.com/view/NtKGWh)
+[here](https://www.shadertoy.com/view/NtKGWh).
+
+Another example of an effect with rotating gears (the 2022 holiday card) is
+[here](gears.frag); a ShaderToy online version is
+[here](https://www.shadertoy.com/view/DssSDS).
 
 ## Exporting the designs as JPGs using Python
 
