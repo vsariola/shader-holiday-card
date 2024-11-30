@@ -9,9 +9,9 @@ Instructions on how to make animated holiday cards from OpenGL shaders.
 For the past years, I've participated in the Demoscene Holiday Card Exchange
 ([2020](https://www.pouet.net/topic.php?which=11998),
 [2021](https://www.pouet.net/topic.php?which=12205),
-[2022](https://www.pouet.net/topic.php?which=12374)),
+[2022](https://www.pouet.net/topic.php?which=12374),
 [2023](https://www.pouet.net/topic.php?which=12543),
-[2024](https://www.pouet.net/topic.php?which=12731). I made animated cards, in
+[2024](https://www.pouet.net/topic.php?which=12731)). I made animated cards, in
 the spirit of over head projector effects. If you don't know what that means,
 see for example: [Shapes by Cortex](https://www.pouet.net/prod.php?which=53773).
 
@@ -27,7 +27,7 @@ animations](https://en.wikipedia.org/wiki/Barrier-grid_animation_and_stereograph
 with a spiral shaped barrier. These are also sometimes known as scanimations or
 Moiré animations.
 
-The designs were prototyped with [Shadertoy](https://shadertoy.com/),
+The designs were prototyped with [Shadertoy](https://www.shadertoy.com/view/lcycD3),
 exported as JPG with Python, printed using a laser printer on paper and
 on film, and finally assembled onto a cardboard backing.
 
