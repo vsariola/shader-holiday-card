@@ -112,7 +112,7 @@ poetry.lock
 .vscode/
 
 # Project specific
-*.jpg
+/*.jpg
 *.pdf
 *.txt
 
