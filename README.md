@@ -27,9 +27,10 @@ animations](https://en.wikipedia.org/wiki/Barrier-grid_animation_and_stereograph
 with a spiral shaped barrier. These are also sometimes known as scanimations or
 Moiré animations.
 
-The designs were prototyped with [Shadertoy](https://www.shadertoy.com/view/lcycD3),
-exported as JPG with Python, printed using a laser printer on paper and
-on film, and finally assembled onto a cardboard backing.
+The designs were prototyped with
+[Shadertoy](https://www.shadertoy.com/view/lcycD3), exported as JPG with Python,
+printed using a laser printer on paper and on film, and finally assembled onto a
+cardboard backing.
 
 ## Materials and tools needed
 
@@ -158,7 +159,7 @@ paper and exactly 14.5 cm x 14.5 cm.
    these the left, middle, and right sections. Then flip the cardboard
    over, so the scored side is down.
 
-<img src="images/score.jpg" alt="Scoring the paper with backside of knife" width="600 dp"/>
+<img src="images/scoring.jpg" alt="Scoring the paper with backside of knife" width="600 dp"/>
 
 3. Fold the right section to the center, then the left section on top.
    The scored side should be the outside of the folds. Then unfold both
