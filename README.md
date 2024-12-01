@@ -53,10 +53,10 @@ them online. The rest you can get from a well-stocked craft store.
    A4.
 2. **Brass fasteners.** I used brass paper fasteners (split pins), with a width
    of ~ 3 mm.
-3. **Cardboard.** Each card requires a 15 cm x 45 cm rectangle. I used 50 cm x
-   65 cm 240 g/m^2 cardboard sheets from Canson, so each sheet gives 4 cards. I
-   preferred dark cardboard (black, ultramarine), because the animation will be
-   quite dark, due to majority of the foreground being black.
+3. **Cardboard.** Each card requires a 150 mm x 450 mm rectangle. I used 500 mm
+   x 650 mm 240 g/m<sup>2</sup> cardboard sheets from Canson, so each sheet
+   gives 4 cards. I preferred dark cardboard (black, ultramarine), because the
+   animation will be quite dark, due to majority of the foreground being black.
 4. **Spray adhesive.** I used Maston 500 ml Spray Adhesive. Not all of them are
    equal: some cheaper brands created awful clumps and did not spray evenly.
 5. **Super glue.** I used Loctite 5g Precision. Some of the cheap stuff doesn't
@@ -87,26 +87,27 @@ screen coordinates (-1 .. 1) and time as parameters and outputs an RGB color.
 
 The foreground will be a 16-armed spiral with 50 rings from center to edge, with
 majority of it being black and 20% will be transparent (white). For each pixel
-we can calculate "phase", with something like `phase =
+we can calculate "phase", with something like `float phase =
 mod(16*atan2(y,x)/(2*pi)+50*length(vec2(x,y)),1)` and in the foreground, if
 `phase < 0.2`, then the pixel is white, otherwise it is black. The spiral loops
 after it is turned 1/16th circle, so in the final card, the animation starts
-looping after the foreground is turned 1/16th circle. The foreground looks like this:
+looping after the foreground is turned 1/16th circle. The foreground looks like
+this:
 
 <img src="images/foreground.jpg" alt="Foreground of the shader barried-grid animation" width="600 dp"/>
 
 These images have been downscaled for the web; use the Python scripts below to
 generate high resolution versions of the designs for printing.
 
-The background print is now simply produced by `pixelcolor =
+The background print is now simply produced by `vec3 pixelcolor =
 animation(uv,phase)`, where phase is calculated using the same equation as in
 the foreground. Note that due to the duty cycle of the foreground being 20%, at
 every instance we see not only the current slice t of the animation, but all
 colors in a time range of [t,t - 0.2]. So there will be significant "motion
-blur". You can decrease the duty cycle to make the animation sharper, but this
-will also make the whole animation darker, so you may want to experiment here to
-get the results you want. Values 0.2 .. 0.3 usually work well, but you might
-want to experiment here. The background looks like this:
+blur". Decreasing the duty cycle reduces the motion blur, but makes the whole
+animation darker, and vice versa. You may want to experiment here to get the
+results you want; values 0.2 .. 0.3 usually worked well. The background looks
+like this:
 
 <img src="images/background.jpg" alt="Background of the shader barried-grid animation" width="600 dp"/>
 
@@ -118,8 +119,8 @@ Finally, due to alignment errors in the final card, the effect tends to break
 near the middle and to work better on the edges. Thus, effects with darkness in
 the middle (tunnels, starfields) seem to work the best.
 
-Examples of animations I've made over the years (use mouse to see how the
-animation looks as a barrier-grid animation):
+Examples of animations I've made over the years. In ShaderToy, use mouse to see
+how the animation looks as a barrier-grid animation:
 
 | Year | Effect | Source                          | Shadertoy prototype                                                                                    |
 |------|--------|---------------------------------|--------------------------------------------------------------------------------------------------------|
@@ -127,6 +128,10 @@ animation looks as a barrier-grid animation):
 | 2023 | Torus  | [torus.frag](code/torus.frag)   | [![Torus](https://www.shadertoy.com/media/shaders/mlKcWt.jpg)](https://www.shadertoy.com/view/mlKcWt)  |
 | 2022 | Gears  | [gears.frag](code/gears.frag)   | [![Gears](https://www.shadertoy.com/media/shaders/DssSDS.jpg)](https://www.shadertoy.com/view/DssSDS)  |
 | 2021 | Tunnel | [tunnel.frag](code/tunnel.frag) | [![Tunnel](https://www.shadertoy.com/media/shaders/NtKGWh.jpg)](https://www.shadertoy.com/view/NtKGWh) |
+
+The codes here are extremely unoptimized and slow for what they do, but that
+doesn't matter, as they will be running on a holiday card with more computing
+power than your computer 😸
 
 Now, fork one of the shaders on ShaderToy and make your own animation! Once you
 are happy with your shader, save it into .frag file, following the examples
@@ -153,7 +158,7 @@ Try `poetry run python card.py --help` for more options; `--preview` allows
 previewing the design before exporting the designs. I had to disable the Windows
 GPU driver [timeout detection and
 recovery](https://github.com/ROCm/ROCm/issues/2335) as some of the designs were
-so slow to export :)
+so slow to export 🦥
 
 ## 🖨️Printing the design🖨️
 
