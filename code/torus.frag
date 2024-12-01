@@ -78,20 +78,14 @@ float box(vec3 p, vec3 s){
 
 vec2 map(vec3 p,float t) {
     float s = sdTorus(p,vec2(1,0.5));
-
     glow += 0.00002/(0.01+s*s)*vec3(1,1,10);
-
     pModTorus(p,t,1.,4.,20.);
-
     float r = sdSphere(p-vec3(1.5,0,0),.2);
-
     glow += 0.00005/(0.0005+r*r)*(0.3+0.5*cos(vec3(1.,2,3)+p.z*5.));
-
     return vec2(min(r,s),1.);
 }
 
 vec3 animation(vec2 uv,float t) {
-
     if (length(uv)>1.)
         return vec3(1.);
 
