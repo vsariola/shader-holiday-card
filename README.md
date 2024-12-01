@@ -2,10 +2,10 @@
 
 ‼️ Ah, it's that time of the year: time to send the seasonal greeting cards!
 Making your own cards is fun, but alas, we are just shader coders; we only know
-how to make cool shaders. If only there was a way to convert a shader an
+how to make cool shaders. If only there was a way to convert a shader to an
 animated holiday card 🤔....
 
-But there is! 🎉 It's called barrier-grid animations (🚧-🏁). Today we will show
+But there is!🎉 It's called barrier-grid (🚧-🏁) animations. Today we will show
 how you can convert your shader into an animated holiday card.
 
 Sneak peek of the result (click to watch on Youtube):
@@ -38,7 +38,7 @@ cardboard backing.
 
 ## 🛒Materials and tools needed⚒️
 
-This takes a bit of preparation! In particular, finding laser transparency films
+This takes a bit of preparation. In particular, finding laser transparency films
 from brick-and-mortar shops was surprisingly hard nowadays, so I just ordered
 them online. The rest you can get from a well-stocked craft store.
 
@@ -70,7 +70,8 @@ them online. The rest you can get from a well-stocked craft store.
 7. **Precision cutting knife**. X-acto or similar.
 8. **Compass**. The tool for drawing circles, not the device for finding the
    magnetic north.
-9. **Paper cutting board**. Preferably with one dimension over 45 cm and a grid.
+9. **Paper cutting board**. Preferably with one dimension over 450 mm and a
+   grid.
 10. **White paper**.
 11. **Newspaper or similar**. On which one can apply the spray adhesive.
 12. **Disposable gloves**. The spray adhesive and superglue are kinda nasty on
@@ -88,11 +89,11 @@ screen coordinates (-1 .. 1) and time as parameters and outputs an RGB color.
 The foreground will be a 16-armed spiral with 50 rings from center to edge, with
 majority of it being black and 20% will be transparent (white). For each pixel
 we can calculate "phase", with something like `float phase =
-mod(16*atan2(y,x)/(2*pi)+50*length(vec2(x,y)),1)` and in the foreground, if
-`phase < 0.2`, then the pixel is white, otherwise it is black. The spiral loops
-after it is turned 1/16th circle, so in the final card, the animation starts
-looping after the foreground is turned 1/16th circle. The foreground looks like
-this:
+mod(16*atan2(uv.y,uv.x)/(2*pi)+50*length(vec2(uv.x,uv.y)),1)` and in the
+foreground, if `phase < 0.2`, then the pixel is white, otherwise it is black.
+The spiral loops after it is turned 1/16th circle, so in the final card, the
+animation starts looping after the foreground is turned 1/16th circle. The
+foreground looks like this:
 
 <img src="images/foreground.jpg" alt="Foreground of the shader barried-grid animation" width="600 dp"/>
 
@@ -158,23 +159,25 @@ Try `poetry run python card.py --help` for more options; `--preview` allows
 previewing the design before exporting the designs. I had to disable the Windows
 GPU driver [timeout detection and
 recovery](https://github.com/ROCm/ROCm/issues/2335) as some of the designs were
-so slow to export 🦥
+so slow to export... 🦥
 
 ## 🖨️Printing the design🖨️
 
 To print the designs, a high quality color laser printer is preferred, as the
 animation will work better when the tiny lines are sharp.
 
-Print the background.jpg on normal white paper and foreground.jpg on the
+Print the background.jpg on a normal white paper and foreground.jpg on the
 transparent film.
 
 Note that the foreground design will be *mirrored*: we want the printed side of
-the film facing directly against the printed side of the paper. The designs
-include some small and large circles to allow figuring out which side is which;
-otherwise it's a bit tough to see from the film.
+the film facing directly against the printed side of the paper. Otherwise, there
+will be a gap equal of the film thickness between the foreground and the
+background, which makes the animation work less well. The designs include some
+small and large circles to allow figuring out which side is which; otherwise
+it's a bit tough to see from the film.
 
 To actually print the designs on Windows, Paint has good enough control of the
-final dimensions of the print. It even read the DPI correctly, so if you do Page
+final dimensions of the print. It read the DPI correctly, so if you do Page
 Setup before printing (File -> Print -> Page Setup), you can make the final
 print centered on paper and exactly 145 mm x 145 mm.
 
@@ -184,7 +187,7 @@ Time to get crafty and actually make the card!
 
 1. Cut a 150 mm x 450 mm rectangle from the cardboard.
 
-<img src="images/rectangle.jpg" alt="Photograph showing a 15 cm x 45 cm rectangle cut from cardboards" width="600 dp"/>
+<img src="images/rectangle.jpg" alt="Photograph showing a 150 mm x 450 mm rectangle cut from cardboards" width="600 dp"/>
 
 2. With the backside of the knife, score the cardboard, splitting the cardboard
    into a 151 mm left, 150 mm middle and a 149 mm right section. This slight
