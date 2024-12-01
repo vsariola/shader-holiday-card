@@ -34,8 +34,7 @@ vec2 hash( vec2 p )
 }
 
 // return distance, and cell id
-vec2 voronoi( in vec2 x )
-{
+vec2 voronoi( in vec2 x ) {
     x.x = mod(x.x*12.,12.);
     vec2 n = vec2(floor( x.x)+floor(x.y),0);
     vec2 f = fract( x );

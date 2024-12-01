@@ -68,6 +68,8 @@ const float RDIV = pow(RSCALE,float(ITERS));
 const float GLOWAMOUNT = 0.0449857728183;
 const float GLOWDECAY = 1e4;
 
+// the background is copy-pasted from balrog, a 256b executable graphics
+// https://github.com/vsariola/balrog/
 vec3 bg(vec2 uv) {
     vec2 ray = uv;
     ray.y = -ray.y;
@@ -76,7 +78,6 @@ vec3 bg(vec2 uv) {
     vec3 p = vec3(CAM_X,CAM_Y,CAM_Z);
     int i;
     float glow = 0.0;
-
 
     for(i = 0; i < STEPS; i++) {
 
