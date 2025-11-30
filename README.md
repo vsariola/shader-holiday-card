@@ -140,22 +140,20 @@ above, and continue to the next step.
 
 ## 🚀Exporting the designs as JPGs using Python🚀
 
-Prerequisites: [Python](https://www.python.org/) and
-[poetry](https://python-poetry.org/). Then:
+Prerequisites:
+- [uv](https://docs.astral.sh/uv/) installed
+- the code from the [code/](code) directory.
 
-1. Download the sourcecode from the subfolder [code/](code)
-
-2. Run:
+Then:
 
 ```
-poetry install
-poetry run python card.py <your_shader>.frag
+uv run card.py <your_shader>.frag
 ```
 
 This will export background.jpg and foreground.jpg, with nominal sizes of 145 mm
 x 145 mm in 8192 x 8192 resolution.
 
-Try `poetry run python card.py --help` for more options; `--preview` allows
+Try `uv run card.py --help` for more options; `--preview` allows
 previewing the design before exporting the designs. I had to disable the Windows
 GPU driver [timeout detection and
 recovery](https://github.com/ROCm/ROCm/issues/2335) as some of the designs were
